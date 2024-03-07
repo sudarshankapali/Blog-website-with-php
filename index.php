@@ -5,6 +5,7 @@ if(!isset($_SESSION['heading'])){
     $_SESSION['paragraph'] = ["This is paragraph template 1","This is paragraph template 2"];
 }
 $combinedArray = array_combine($_SESSION['heading'], $_SESSION['paragraph']);
+$combinedArrayReversed = array_reverse($combinedArray);
 //var_dump($combinedArray);
 ?>
 <!DOCTYPE html>
@@ -23,21 +24,21 @@ $combinedArray = array_combine($_SESSION['heading'], $_SESSION['paragraph']);
         <section class="header" title="navigation">
             <div>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="./post.php">Create</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
         </section>
         <!--End of navigation section-->
-        <section class="hero" title="hero-section">
+        <section class="hero" title="hero-section" id="home">
             <div>
                 <h1>Express your thoughts</h1>
                 <p>Publish your passion</p>
             </div>
             <div class="blog-container">
                 <?php
-                foreach($combinedArray as $heading=>$paragraph){
+                foreach($combinedArrayReversed as $heading=>$paragraph){
                     echo
                     "<div class='blog-posts'>
                         <h1>$heading</h1>

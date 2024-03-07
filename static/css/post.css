@@ -17,6 +17,7 @@ main{
 .form{
     background-color: var(--background-color);
     padding: 2rem 1rem;
+    
 }
 .form > div{
     margin: 0 auto;
@@ -24,6 +25,7 @@ main{
     background-color: var(--third-color);
     display: flex;
     flex-direction: column;
+    border: 2px solid var(--foreground-color);
 }
 .form > h1{
     color: var(--foreground-color);

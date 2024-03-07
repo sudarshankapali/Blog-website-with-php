@@ -40,7 +40,7 @@ $combinedArrayReversed = array_reverse($combinedArray);
                 <?php
                 foreach($combinedArrayReversed as $heading=>$paragraph){
                     echo
-                    "<div class='blog-posts'>
+                    "<div class='blog-posts' title='Blog-post'>
                         <h1>$heading</h1>
                         <p>$paragraph</p>
                         <button>Edit</button>

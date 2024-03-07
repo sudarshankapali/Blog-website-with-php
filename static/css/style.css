@@ -1,0 +1,15 @@
+@import "./reset.css";
+:root{
+    --background-color: #d7f7f9;
+    --foreground-color: #235464;
+}
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+main{
+    background-color: red;
+    max-width: 60rem;
+    margin: 0 auto;
+}

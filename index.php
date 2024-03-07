@@ -14,14 +14,23 @@
 <body>
     <main>
         <section class="header" title="navigation">
-            <h1>this is heading</h1>
+            <div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Post</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </section>
+        <!--End of navigation section-->
         <section class="hero" title="hero-section">
             <h1>this is hero section</h1>
         </section>
+        <!--End of hero section-->
         <section class="footer" title="footer">
             <h1>this is footer section</h1>
         </section>
+        <!--End of footer section-->
     </main>
 </body>
 </html>

@@ -17,6 +17,7 @@ main{
 }
 .header{
     background-color: var(--third-color);
+    margin-bottom: 2rem;
 }
 .header > div > ul{
     display: flex;
@@ -29,6 +30,13 @@ main{
 .header > div > ul > li > a{
     text-decoration: none;
     color: var(--foreground-color);
+    padding: 5px 8px;
+}
+.header > div > ul > li > a:hover{
+    background-color: var(--foreground-color);
+    color: var(--third-color);
+    border-radius: 0.5rem;
+    padding: 5px 8px;
 }
 /*End of navigation*/
 .hero{
@@ -38,12 +46,14 @@ main{
 .hero > .blog-container{
     max-width: 50rem;
     margin: 0 auto;
-    background-color: var(--third-color);
+    background-color: var(--background-color);
 }
 .hero > .blog-container > .blog-posts{
+    background-color: var(--third-color);
     border: 2px solid var(--fourth-color);
     border-radius: 0.9rem;
     padding-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 .hero > .blog-container > .blog-posts > button{
     color: var(--third-color);

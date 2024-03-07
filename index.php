@@ -1,9 +1,11 @@
 <?php
 session_start();
-$_SESSION['heading'] = "This is a heading";
-$_SESSION['paragraph'] = "This is a paragraph";
-$heading = $_SESSION['heading'];
-$paragraph = $_SESSION['paragraph'];
+if(!isset($_SESSION['heading'])){
+    $_SESSION['heading'] = ["This is heading template 2","This is heading template 2"];
+    $_SESSION['paragraph'] = ["This is paragraph template 1","This is paragraph template 2"];
+}
+$combinedArray = array_combine($_SESSION['heading'], $_SESSION['paragraph']);
+//var_dump($combinedArray);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +24,7 @@ $paragraph = $_SESSION['paragraph'];
             <div>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Create</a></li>
+                    <li><a href="./post.php">Create</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
@@ -35,13 +37,15 @@ $paragraph = $_SESSION['paragraph'];
             </div>
             <div class="blog-container">
                 <?php
-                echo
+                foreach($combinedArray as $heading=>$paragraph){
+                    echo
                     "<div class='blog-posts'>
                         <h1>$heading</h1>
                         <p>$paragraph</p>
                         <button>Edit</button>
                         <button>Delete</button>
                     </div>";
+                }
                 ?>
             </div>
         </section>

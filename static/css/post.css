@@ -1,0 +1,49 @@
+:root{
+    --background-color: #d7f7f9;
+    --foreground-color: #235464;
+    --third-color: white;
+    --fourth-color: black;
+}
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+main{
+    background-color: var(--background-color);
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.form{
+    background-color: var(--background-color);
+    padding: 2rem 1rem;
+}
+.form > div{
+    margin: 0 auto;
+    max-width: 55rem;
+    background-color: var(--third-color);
+    display: flex;
+    flex-direction: column;
+}
+.form > h1{
+    color: var(--foreground-color);
+    text-align: center;
+}
+.form > div > form{
+    row-gap: 1rem;
+    text-align: center;
+}
+.form > div > form > label{
+    margin-bottom: 1rem;
+}
+.form > div > form > input{
+    margin-bottom: 1rem;
+}
+.form > div > form > button{
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    border-radius: 0.2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--foreground-color);
+}

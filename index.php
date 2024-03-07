@@ -27,10 +27,17 @@
             <h1>this is hero section</h1>
         </section>
         <!--End of hero section-->
-        <section class="footer" title="footer">
-            <h1>this is footer section</h1>
+        <section title="footer" >
+            <footer>
+                <h1>Publish your thoughts</h1>
+                <div>
+                    <ul>
+                        <li>About</li>
+                        <li>copyright @2024</li>
+                    </ul>
+                </div>
+            </footer>
         </section>
-        <!--End of footer section-->
     </main>
 </body>
 </html>

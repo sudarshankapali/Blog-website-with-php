@@ -28,3 +28,20 @@ main{
     text-decoration: none;
     color: var(--foreground-color);
 }
+/*End of navigation*/
+/*End of hero section*/
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--foreground-color);
+}
+footer > h1{
+    text-align: center;
+}
+footer > div > ul{
+display: flex;
+list-style: none;
+justify-content: center;
+column-gap: 1rem;
+}
+/*End of footer section*/

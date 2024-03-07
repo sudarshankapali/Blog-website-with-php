@@ -1,4 +1,9 @@
 <?php
+session_start();
+$_SESSION['heading'] = "This is a heading";
+$_SESSION['paragraph'] = "This is a paragraph";
+$heading = $_SESSION['heading'];
+$paragraph = $_SESSION['paragraph'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,14 +22,28 @@
             <div>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Post</a></li>
+                    <li><a href="#">Create</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
         </section>
         <!--End of navigation section-->
         <section class="hero" title="hero-section">
-            <h1>this is hero section</h1>
+            <div>
+                <h1>Express your thoughts</h1>
+                <p>Publish your passion</p>
+            </div>
+            <div class="blog-container">
+                <?php
+                echo
+                    "<div class='blog-posts'>
+                        <h1>$heading</h1>
+                        <p>$paragraph</p>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>";
+                ?>
+            </div>
         </section>
         <!--End of hero section-->
         <section title="footer" >

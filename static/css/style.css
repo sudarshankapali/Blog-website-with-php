@@ -2,6 +2,8 @@
 :root{
     --background-color: #d7f7f9;
     --foreground-color: #235464;
+    --third-color: white;
+    --fourth-color: black;
 }
 body{
     margin: 0;
@@ -14,7 +16,7 @@ main{
     margin: 0 auto;
 }
 .header{
-    background-color: white;
+    background-color: var(--third-color);
 }
 .header > div > ul{
     display: flex;
@@ -29,6 +31,32 @@ main{
     color: var(--foreground-color);
 }
 /*End of navigation*/
+.hero{
+    text-align: center;
+    color: var(--foreground-color);
+}
+.hero > .blog-container{
+    max-width: 50rem;
+    margin: 0 auto;
+    background-color: var(--third-color);
+}
+.hero > .blog-container > .blog-posts{
+    border: 2px solid var(--fourth-color);
+    border-radius: 0.9rem;
+    padding-bottom: 2rem;
+}
+.hero > .blog-container > .blog-posts > button{
+    color: var(--third-color);
+    background-color: green;
+    padding: 0.9rem 1.3rem;
+    border-radius: 0.3rem;
+}
+.hero > .blog-container > .blog-posts > button:last-child{
+    color: var(--third-color);
+    background-color: red;
+    padding: 0.9rem 1.3rem;
+    border-radius: 0.3rem;
+}
 /*End of hero section*/
 footer{
     display: grid;

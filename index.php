@@ -1,7 +1,7 @@
 <?php
 session_start();
 require './backend/session.php';
-var_dump($combinedArray);
+//var_dump($combinedArray);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,6 +39,7 @@ var_dump($combinedArray);
                         <h1>$heading</h1>
                         <p>$paragraph</p>
                         <form action='./edit.php' method='post'>
+                        <input type='hidden' name='editIndex' value='$heading'>
                         <button type='submit'>Edit</button>
                         </form>
                         <form action='./backend/delete.php' method='post'>

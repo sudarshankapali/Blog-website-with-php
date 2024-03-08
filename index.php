@@ -1,12 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['heading'])){
-    $_SESSION['heading'] = ["This is heading template 2","This is heading template 2"];
-    $_SESSION['paragraph'] = ["This is paragraph template 1","This is paragraph template 2"];
-}
-$combinedArray = array_combine($_SESSION['heading'], $_SESSION['paragraph']);
-$combinedArrayReversed = array_reverse($combinedArray);
-//var_dump($combinedArray);
+require './backend/session.php';
+var_dump($combinedArray);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,8 +38,13 @@ $combinedArrayReversed = array_reverse($combinedArray);
                     "<div class='blog-posts' title='Blog-post'>
                         <h1>$heading</h1>
                         <p>$paragraph</p>
-                        <button>Edit</button>
-                        <button>Delete</button>
+                        <form action='./edit.php' method='post'>
+                        <button type='submit'>Edit</button>
+                        </form>
+                        <form action='./backend/delete.php' method='post'>
+                        <input type='hidden' name='deleteIndex' value='$heading'>
+                        <button type='submit'>Delete</button>
+                        </form>
                     </div>";
                 }
                 ?>
